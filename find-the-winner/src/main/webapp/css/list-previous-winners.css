@@ -43,6 +43,11 @@ table th {
     border-bottom-width: 2px;
 }
 
+table tbody tr:hover{
+    cursor: pointer;
+    background-color: rgba(211, 211, 211, 0.34);
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -50,6 +55,3 @@ main {
     padding: 10px;
 }
 
-main table {
-    flex-grow: 1;
-}
