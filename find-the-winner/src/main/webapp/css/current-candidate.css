@@ -1,0 +1,41 @@
+main > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main > section > img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+main > p{
+    text-align: center;
+    padding: 20px 10px;
+}
+
+main > section {
+    text-align: center;
+}
+
+main > section > form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main > section > form > input[type="password"]{
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid lightgray;
+    outline: none;
+}
+
+main > section > form > input[type="password"]:focus {
+    border-color: dodgerblue;
+}

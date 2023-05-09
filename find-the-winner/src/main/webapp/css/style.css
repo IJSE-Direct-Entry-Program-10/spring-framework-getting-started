@@ -25,3 +25,44 @@ h3 {
     font-size: 1.25rem;
     padding: 10px 5px;
 }
+
+.button {
+    text-decoration: none;
+    color: inherit;
+    background-color: lightgray;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.button:hover {
+    background-color: rgba(211, 211, 211, 0.85);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header,
+footer {
+    flex-shrink: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid lightgray;
+}
+
+header {
+    text-align: center;
+    padding: 15px;
+}
