@@ -34,11 +34,13 @@ public class WebAppConfig implements WebMvcConfigurer {
 
     @Bean
     public MyController1 myController1(){
+        System.out.println("Who the heck invoked me?");
         return new MyController1();
     }
 
     @Bean
     public MyController2 myController2(){
+        System.out.println("Damn! I have been invoked again");
         return new MyController2();
     }
 }

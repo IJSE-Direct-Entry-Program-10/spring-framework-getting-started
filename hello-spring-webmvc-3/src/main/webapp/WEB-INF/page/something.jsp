@@ -10,6 +10,8 @@
 </head>
 <body>
     <h1>Hi, I got the request from My Controller 1</h1>
+    <h2>I got this value: <%= request.getAttribute("something") %> from My Controller 1</h2>
     <h2>I got this value: ${something} from My Controller 1</h2>
+    <h2>I got this value: ${requestScope['something']} from My Controller 1</h2>
 </body>
 </html>

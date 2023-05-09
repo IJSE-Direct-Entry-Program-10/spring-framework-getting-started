@@ -4,6 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.View;
+import org.springframework.web.servlet.view.InternalResourceView;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Controller /* @Component */
 @RequestMapping("/hello")
@@ -14,9 +20,10 @@ public class MyController1 {
     }
 
     @GetMapping
-    public String doSomething(Model model){
+    public ModelAndView doSomething(){
         System.out.println("MyController1: doSomething()");
-        model.addAttribute("something", "ijse");
-        return "something";
+        Map<String, Object> model = new HashMap<>();
+        model.put("something", "ijse");
+        return new ModelAndView("something", model);
     }
 }

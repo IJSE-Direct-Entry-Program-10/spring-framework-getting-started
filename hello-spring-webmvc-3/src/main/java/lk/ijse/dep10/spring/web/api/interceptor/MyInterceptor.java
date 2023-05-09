@@ -1,5 +1,6 @@
 package lk.ijse.dep10.spring.web.api.interceptor;
 
+import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
