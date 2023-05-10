@@ -1,7 +1,10 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <base href="/">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -29,86 +32,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>
-                    <img src="https://www.goodmorningimagesdownload.com/wp-content/uploads/2021/12/Best-Quality-Profile-Images-Pic-Download-2023.jpg" alt="">
-                </td>
-                <td>Rashmitha Piyushan</td>
-                <td>2023-May-09</td>
-                <td>2023-May-10</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="https://www.goodmorningimagesdownload.com/wp-content/uploads/2021/12/Best-Quality-Profile-Images-Pic-Download-2023.jpg" alt="">
-                </td>
-                <td>Rashmitha Piyushan</td>
-                <td>2023-May-09</td>
-                <td>2023-May-10</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="https://www.goodmorningimagesdownload.com/wp-content/uploads/2021/12/Best-Quality-Profile-Images-Pic-Download-2023.jpg" alt="">
-                </td>
-                <td>Rashmitha Piyushan</td>
-                <td>2023-May-09</td>
-                <td>2023-May-10</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="https://www.goodmorningimagesdownload.com/wp-content/uploads/2021/12/Best-Quality-Profile-Images-Pic-Download-2023.jpg" alt="">
-                </td>
-                <td>Rashmitha Piyushan</td>
-                <td>2023-May-09</td>
-                <td>2023-May-10</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="https://www.goodmorningimagesdownload.com/wp-content/uploads/2021/12/Best-Quality-Profile-Images-Pic-Download-2023.jpg" alt="">
-                </td>
-                <td>Rashmitha Piyushan</td>
-                <td>2023-May-09</td>
-                <td>2023-May-10</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="https://www.goodmorningimagesdownload.com/wp-content/uploads/2021/12/Best-Quality-Profile-Images-Pic-Download-2023.jpg" alt="">
-                </td>
-                <td>Rashmitha Piyushan</td>
-                <td>2023-May-09</td>
-                <td>2023-May-10</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="https://www.goodmorningimagesdownload.com/wp-content/uploads/2021/12/Best-Quality-Profile-Images-Pic-Download-2023.jpg" alt="">
-                </td>
-                <td>Rashmitha Piyushan</td>
-                <td>2023-May-09</td>
-                <td>2023-May-10</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="https://www.goodmorningimagesdownload.com/wp-content/uploads/2021/12/Best-Quality-Profile-Images-Pic-Download-2023.jpg" alt="">
-                </td>
-                <td>Rashmitha Piyushan</td>
-                <td>2023-May-09</td>
-                <td>2023-May-10</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="https://www.goodmorningimagesdownload.com/wp-content/uploads/2021/12/Best-Quality-Profile-Images-Pic-Download-2023.jpg" alt="">
-                </td>
-                <td>Rashmitha Piyushan</td>
-                <td>2023-May-09</td>
-                <td>2023-May-10</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="https://www.goodmorningimagesdownload.com/wp-content/uploads/2021/12/Best-Quality-Profile-Images-Pic-Download-2023.jpg" alt="">
-                </td>
-                <td>Rashmitha Piyushan</td>
-                <td>2023-May-09</td>
-                <td>2023-May-10</td>
-            </tr>
+            <c:forEach var="winner" items="${winners}">
+                <tr>
+                    <td><img src="${winner.pictureUrl}"></td>
+                    <td>${winner.name}</td>
+                    <td>${winner.selectedDate}</td>
+                    <td>${winner.performedDate}</td>
+                </tr>
+            </c:forEach>
+            <c:if test="${empty winners}">
+                <tr>
+                    <td colspan="4">No winners yet!</td>
+                </tr>
+            </c:if>
         </tbody>
     </table>
 </main>
