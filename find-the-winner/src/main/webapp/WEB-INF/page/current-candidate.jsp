@@ -38,8 +38,8 @@
         <c:if test="${empty candidate}">
             <section>
                 <h3>Currently no candidate has been selected to perform!</h3>
-                <form action="#">
-                    <input type="password" placeholder="Enter master password">
+                <form action="/candidates/current" method="POST">
+                    <input name="password" type="password" placeholder="Enter master password">
                     <button class="button">Pick a Candidate</button>
                 </form>
             </section>
