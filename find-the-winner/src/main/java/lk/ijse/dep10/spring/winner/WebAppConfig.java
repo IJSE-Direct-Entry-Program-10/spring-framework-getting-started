@@ -1,6 +1,7 @@
 package lk.ijse.dep10.spring.winner;
 
 import lk.ijse.dep10.spring.winner.api.CandidateController;
+import lk.ijse.dep10.spring.winner.api.WinnerController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.*;
@@ -26,5 +27,10 @@ public class WebAppConfig implements WebMvcConfigurer {
     @Bean
     public CandidateController candidateController(){
         return new CandidateController();
+    }
+
+    @Bean
+    public WinnerController winnerController(){
+        return new WinnerController();
     }
 }

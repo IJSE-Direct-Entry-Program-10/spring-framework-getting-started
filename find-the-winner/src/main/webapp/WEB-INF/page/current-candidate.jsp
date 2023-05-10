@@ -27,8 +27,10 @@
                 <h2>${candidate.name}</h2>
                 <h3>${candidate.nickName}</h3>
                 <h3>Selected Date: ${candidate.selectedDate}</h3>
-                <form action="#">
-                    <input type="password" placeholder="Enter master password">
+                <form action="/winners" method="POST">
+                    <input name="id" type="hidden" value="${candidate.id}">
+                    <input name="selected-date" type="hidden" value="${candidate.selectedDate}">
+                    <input name="password" type="password" placeholder="Enter master password">
                     <button class="button">Won!</button>
                 </form>
             </section>
