@@ -25,8 +25,7 @@ public class CandidateController {
             Statement stm3 = connection.createStatement();
 
             ResultSet rst = stm.executeQuery("SELECT value FROM MetaData WHERE `key`='CandidateID'");
-            ResultSet rst2 = stm2
-                    .executeQuery("SELECT value FROM MetaData WHERE `key`='CandidateSelectedDate'");
+            ResultSet rst2 = stm2.executeQuery("SELECT value FROM MetaData WHERE `key`='CandidateSelectedDate'");
 
             WinnerDTO candidate = null;
 
@@ -35,12 +34,11 @@ public class CandidateController {
                 Date selectedDate = rst2.getDate("value");
 
                 ResultSet rst3 = stm3.executeQuery("SELECT * FROM Student WHERE id=" + id);
-                if (rst3.next()) {
+                if (rst3.next() && selectedDate != null) {
                     String name = rst3.getString("name");
                     String nickName = rst3.getString("nick_name");
                     String pictureUrl = rst3.getString("picture_url");
-                    candidate = new WinnerDTO(id, name, nickName, pictureUrl,
-                            selectedDate, null);
+                    candidate = new WinnerDTO(id, name, nickName, pictureUrl, selectedDate, null);
                 }
             }
             model.addAttribute("candidate", candidate);

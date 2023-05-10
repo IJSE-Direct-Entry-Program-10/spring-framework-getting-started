@@ -35,7 +35,7 @@
         </c:if>
         <c:if test="${empty candidate}">
             <section>
-                <h2>Currently no candidate has been selected to perform!</h2>
+                <h3>Currently no candidate has been selected to perform!</h3>
                 <form action="#">
                     <input type="password" placeholder="Enter master password">
                     <button class="button">Pick a Candidate</button>
