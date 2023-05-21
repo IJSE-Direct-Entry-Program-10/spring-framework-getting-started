@@ -34,7 +34,7 @@
         <tbody>
             <c:forEach var="winner" items="${winners}">
                 <tr>
-                    <td><img src="${winner.pictureUrl}"></td>
+                    <td><img src="${winner.pictureUrl}" referrerpolicy="no-referrer"></td>
                     <td>${winner.name}</td>
                     <td>${winner.selectedDate}</td>
                     <td>${winner.performedDate}</td>

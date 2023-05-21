@@ -23,7 +23,7 @@
     <main>
         <c:if test="${!empty candidate}">
             <section>
-                <img src="${candidate.pictureUrl}" alt="profile">
+                <img src="${candidate.pictureUrl}" alt="profile" referrerpolicy="no-referrer">
                 <h2>${candidate.name}</h2>
                 <h3>${candidate.nickName}</h3>
                 <h3>Selected Date: ${candidate.selectedDate}</h3>
